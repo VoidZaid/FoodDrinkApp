@@ -1,0 +1,237 @@
+:root {
+   --bg-color: #000;
+ }
+ * {
+   font-family: "Roboto", sans-serif;
+   color: #333;
+ }
+ body {
+   margin: 0;
+ }
+ /* header styles */
+ .header {
+   height: 3rem;
+   background-color: orange;
+   padding: 0.2rem 0;
+ }
+ .header__nav {
+   display: flex;
+   justify-content: space-between;
+   margin: 0 1rem;
+ }
+ .header__logo {
+   border-radius: 40%;
+   height: 3rem;
+   width: 3rem;
+   overflow: hidden;
+ }
+ 
+ .header__logo img {
+   height: 3rem;
+ }
+ .header__list {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   gap: 0.8rem;
+   font-size: 1.1rem;
+   font-weight: 600;
+   list-style: none;
+   margin: 0;
+ }
+ .header__list-item a {
+   text-decoration: none;
+   color: whitesmoke;
+ }
+ .container {
+   font-family: sans-serif;
+   text-align: center;
+ 
+   background-color: transparent;
+ }
+ .bg__container {
+   background-color: #eeec;
+   min-height: 100vh;
+   min-width: 100vw;
+   position: fixed;
+   z-index: -10;
+   top: 0;
+   left: 0;
+ }
+ .bg__image {
+   background-image: url(https://img.freepik.com/vector-gratis/vector-ilustracion-dibujos-animados-conjunto-tradicional-comida-comida-rapida_1441-331.jpg?size=626&ext=jpg&ga=GA1.1.2116175301.1701475200&semt=ais);
+   background-position: center;
+   background-size: contain;
+   background-repeat: no-repeat;
+   min-height: 100vh;
+   min-width: 100vw;
+   position: fixed;
+   z-index: -20;
+   top: 0;
+   left: 0;
+ }
+ .products__container {
+   width: 90%;
+   margin: 0 auto;
+   z-index: 200;
+   margin: 0 auto;
+   display: grid;
+ }
+ .products__title {
+   font-size: 2rem;
+ }
+ .products__items__add {
+   height: 30px;
+   cursor: pointer;
+   border-top: 2px solid transparent;
+   margin-top: 0.5rem;
+   width: 90%;
+   transition: all 300ms ease;
+ }
+ .products__items__add:hover {
+   stroke: red;
+   border-top: 2px solid red;
+ }
+ /* card styles */
+ .card {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: auto auto auto;
+   gap: 0;
+   margin: 1rem 0 0;
+   padding: 1rem 0.5rem;
+   background: rgba(0, 128, 128, 0.5);
+   border-radius: 1rem;
+ }
+ .card__description {
+   grid-column: 1/3;
+   grid-row: 1/4;
+   font-size: 1.1rem;
+ }
+ .card__radio {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+ .card__radio-title {
+   font-size: 1rem;
+   margin: 0 0 0.5rem 0;
+ }
+ .card__radio-food {
+ }
+ .card__radio-drink {
+ }
+ .card__stock span {
+   font-weight: 700;
+ }
+ .card__actions-delete {
+   height: 24px;
+   stroke: red;
+ }
+ .card__actions-edit {
+   height: 24px;
+   stroke: red;
+ }
+ 
+ /* modal styles */
+ 
+ .no__scroll {
+   overflow: hidden;
+ }
+ .modal {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: scale(1) translateX(-50%) translateY(-50%);
+   box-sizing: border-box;
+   width: 90%;
+   padding: 1.5rem 1.5rem 1rem;
+   margin: 0 auto;
+   background-color: whitesmoke;
+ 
+   border-radius: 0.7rem;
+   box-shadow: 0 0 5px red;
+   border: none;
+   z-index: 10;
+   opacity: 0;
+   /* transition */
+   filter: blur(4px);
+   transition: all 100ms ease-in;
+ }
+ .modal__bg {
+   background-color: none;
+   position: fixed;
+   min-width: 100vw;
+   min-height: 100vh;
+   z-index: 10;
+   top: 0;
+   left: 0;
+   /* transition */
+   opacity: 0;
+   transition: all 100ms ease-in;
+   backdrop-filter: blur(1px);
+ }
+ .show-bg {
+   opacity: 1;
+   background-color: #3338;
+ }
+ .show-modal {
+   opacity: 1;
+   filter: none;
+ }
+ .modal__form {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: auto auto auto;
+   background-color: whitesmoke;
+   gap: 0.5rem;
+   align-content: center;
+   border-radius: 0.7rem;
+ }
+ .modal__form label {
+   font-size: 1.1rem;
+ }
+ .modal__descr {
+   width: 100%;
+   grid-column: 1/3;
+   grid-row: 1/2;
+ }
+ .modal__descr textarea {
+   height: 100px;
+   width: 100%;
+   padding: 0.5rem;
+   box-sizing: border-box;
+   resize: none;
+ }
+ .modal__category {
+   grid-column: 1/2;
+   grid-row: 2/3;
+ }
+ .modal__stock {
+   margin: 0;
+   grid-column: 2/3;
+   grid-row: 2/3;
+ }
+ .modal__stock input {
+   width: 80%;
+ }
+ .modal__btns {
+   grid-column: 1/3;
+   grid-row: 3/4;
+   display: flex;
+   justify-content: space-around;
+   margin-top: 1rem;
+ }
+ .modal__btns button {
+   display: flex;
+   align-items: center;
+   padding: 0.2rem 0.5rem;
+   border-radius: 1rem;
+   cursor: pointer;
+ }
+ .modal__btn-icon {
+   width: 1.2rem;
+   height: 1.2rem;
+   padding-left: 0.5rem;
+ }
+ 
